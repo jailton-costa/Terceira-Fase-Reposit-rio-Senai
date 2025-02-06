@@ -1,0 +1,9 @@
+.hr {
+  color: aqua;
+  background-color: blue;
+  height: 60px;
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  gap: 25px;
+}
