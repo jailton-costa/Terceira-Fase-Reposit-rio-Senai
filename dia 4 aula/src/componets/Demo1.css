@@ -1,4 +1,8 @@
 .dv{
+  text-align: left 10%;
   background-color: crimson;
-  width: 20%;
+  width: 100%;
+}
+.h1Dv{
+  margin-left: 7.5%;
 }

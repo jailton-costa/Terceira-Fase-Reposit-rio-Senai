@@ -16,23 +16,16 @@ function Demo1() {
     }
     return (
         <div className='dv'>
-            <h1>Demo1</h1>
-            <button onClick={alertUsuario}>clima em mim </button>
+            <h1 className='h1Dv'>--Demo1--</h1>
+            <button onClick={alertUsuario}> em mim </button>
             <br />
-            <button onClick={() => { alert(' isso tambem e um alert / bla-bla-bla') }}>clima em mim 2</button>
+            <button onClick={() => { alert(' isso tambem e um alert kkk') }}> em mim 2</button>
             <br />
-            <div>
-                <p>
-                    cornometro: {cornometro}
-                    <button onClick={incrementaCornometro}>+</button>
-                </p>
-            </div>
-            <div>
-                <p>
-                    estado: {estado}
-                    <button onClick={incremetarEstado}>+</button>
-                </p>
-            </div>
+            {/* <h3>cornometro: {cornometro}</h3>
+            <button onClick={incrementaCornometro}>+</button>
+            <br />
+            <h3>estado: {estado}</h3>
+            <button onClick={incremetarEstado}>+</button> */}
         </div>
     )
 }

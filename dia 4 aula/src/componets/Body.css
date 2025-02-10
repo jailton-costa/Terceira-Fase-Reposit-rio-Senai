@@ -1,4 +1,11 @@
 .by{
+    color:darkcyan;
     background-color:aqua;
     min-height: calc(100vh - 60px);
+}
+.h1By{
+    margin-left: 8%;
+}
+.linhaAviso{
+    border: 2px solid darkcyan;
 }
