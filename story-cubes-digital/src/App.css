@@ -1,6 +1,7 @@
 .ap{
   width: 100%;
-  height: 945px;
+  height: 640px;
   background-color: darkgrey;
   justify-items: center;
+  align-content: center;
 }
