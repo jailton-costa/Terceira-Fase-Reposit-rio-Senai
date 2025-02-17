@@ -28,16 +28,18 @@ function Home_StoryCubesDigital() {
           position: "absolute",
           boxShadow: "10px 14px 16px rgba(0, 0, 0, 0.1)"
         }}>
-          <input type="text" className='inputC' />
-          <h3 className='h3EG' >
-
-          </h3>
-          <h3 className='h3EG' >
-
-          </h3>
-          <h3 className='h3EG' >
-
-          </h3>
+          <input type="text" className='inputC' placeholder='digite a' />
+          <div className="cardsTudo">
+            <h3 className='h3IMG' >
+              <img src="./img/meme.jpg" className="imgEmojis" />
+            </h3>
+            <h3 className='h3IMG' >
+              <img src="./img/meme.jpg" className="imgEmojis" />
+            </h3>
+            <h3 className='h3IMG' >
+              <img src="./img/meme.jpg" className="imgEmojis" />
+            </h3>
+          </div>
           <button onClick={() => setComeçarJogo(!começarJogo)} className='btCARD'>voltar para o menu</button>
 
         </div>
@@ -81,7 +83,7 @@ function Home_StoryCubesDigital() {
           boxShadow: "10px 14px 16px rgba(0, 0, 0, 0.1)"
         }}>
           <h3 className='h3Card'>como jogar story-cubes-digital</h3><br />
-          <h4 className='textoCard'>story-cubes-digital e um jogo de emojis <br /> que os emojis que cair vai decide o que vai acontecer</h4><br />
+          <h4 className='textoCard'>Os Story Cubes (ou Cubo das Histórias) são um conjunto de dados com imagens que ajudam a criar histórias de forma criativa e divertida, É um jogo aberto, ou seja, não tem regras fixas e pode ser jogado de várias maneiras diferentes. Vou te explicar o modo básico de jogar e algumas variações:,story-cubes-digital e um jogo de emojis que os emojis que cair vai decide o que vai acontecer.</h4><br />
           <button onClick={() => setComoJogar(!comoJogar)} className='btCARD'>voltar para o menu</button>
 
         </div>

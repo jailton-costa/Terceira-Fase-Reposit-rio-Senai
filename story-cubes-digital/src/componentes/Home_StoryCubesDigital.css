@@ -42,11 +42,37 @@
 
 
 /* cards */
+.cardsTudo{
+  justify-items: center;
+  display: inline-flex;
+  gap: 5%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+.imgEmojis{
+  display: inline-flex;
+  justify-content: center;
+}
+.inputC{
+  color: blue;
+  background-color: #8e9dab;
+  text-align: center;
+  border: 1px solid blue;
+  border-radius: 10px;
+  width: 60%;
+
+}
+.h3IMG{
+  position: relative;
+  width: 30%;
+  height: 30%;
+  border: 1px solid blue;
+}
 .h3Card{
   color: blue;
 }
 .textoCard{
-  color: rgb(47, 212, 212);
+  color: blue;
 }
 
 
