@@ -1,100 +1,99 @@
 import { useState } from 'react';
-import '../componentes/Home_StoryCubesDigital.css'
+import '../componentes/Home_StoryCubesDigital.css';
 
 function Home_StoryCubesDigital() {
   const [começarJogo, setComeçarJogo] = useState(false);
   const [ultimoJogo, setUltimoJogo] = useState(false);
   const [comoJogar, setComoJogar] = useState(false);
+  const [emojis, setEmojis] = useState(["❓", "❓", "❓"]); // Emojis iniciais
+  const [ultimoEmojis, setUltimoEmojis] = useState([]); // Últimos emojis usados
+  const [historiaInput, setHistoriaInput] = useState(""); // Texto digitado no input
+  const [ultimaHistoria, setUltimaHistoria] = useState(""); // Última história salva
+
+  const listaEmojis = [
+    "😀", "😂", "😍", "🤔", "😎", "🙄", "🥳", "😴", "😤", "😭", "😡", "🤯", "😜", "🤩", "😇",
+    "👻", "💀", "🤖", "👽", "👾", "🐉", "🦄", "🐙", "🦖", "🐺", "🐵",
+    "🚀", "⏳", "⚡", "💡", "🔑", "🛸", "🎩", "📜", "💰", "🧩",
+    "🌲", "🔥", "🌊", "🌪", "🏔", "🌞", "🌕", "🌠", "🍀", "🪲",
+    "🍎", "🍕", "🍔", "🍩", "🍉", "🍫", "🧀", "🍗", "🥑", "🍇",
+    "🚗", "🚲", "✈️", "🚂", "🚁", "🚢", "🛶", "🏎", "🛵", "🛻",
+    "🧙‍♂️", "🧛‍♂️", "🧞‍♂️", "🧜‍♀️", "🦹‍♂️", "🦸‍♀️", "👑", "🦄", "🔮", "📖"
+  ];
+
+  // Função para gerar novos emojis aleatórios
+  const gerarEmojis = () => {
+    const novosEmojis = Array.from({ length: 3 }, () =>
+      listaEmojis[Math.floor(Math.random() * listaEmojis.length)]
+    );
+    setEmojis(novosEmojis);
+    setUltimoEmojis(novosEmojis); // Salvar os últimos emojis gerados
+    setUltimaHistoria(historiaInput); // Salvar o texto do input
+  };
 
   return (
     <div className='homeSCD'><br />
-      <h1 className='testo'>Seja bem vindo ao story-cubes-digital</h1>
+      <h1 className='testo'>Seja bem-vindo ao Story Cubes Digital</h1>
       <div className='bts'>
-        {/* {visivel ? "Esconder Card" : "Mostrar Card"} */}
-        <button onClick={() => setComeçarJogo(!começarJogo)} className='bt'>começar o jogo</button>
-        <button onClick={() => setUltimoJogo(!ultimoJogo)} className='bt'>ultimo jogo</button>
-        <button onClick={() => setComoJogar(!comoJogar)} className='bt'>Como jogar story-cubes-digital</button>
+        <button onClick={() => setComeçarJogo(!começarJogo)} className='bt'>Começar o jogo</button>
+        <button onClick={() => setUltimoJogo(!ultimoJogo)} className='bt'>Último jogo</button>
+        <button onClick={() => setComoJogar(!comoJogar)} className='bt'>Como jogar</button>
       </div>
 
       {começarJogo && (
-        <div style={{
-          width: "41%",
-          height: "50%",
-          transform: "scale(1)",
-          transition: "1s",
-          marginTop: "-244px",
-          background: "#8e9dab",
-          border: "1px solid blue",
-          borderRadius: "8px",
-          position: "absolute",
-          boxShadow: "10px 14px 16px rgba(0, 0, 0, 0.2)"
-        }}>
-          <div className='testoCJ'>
-
-
-            <input type="text" className='inputC' placeholder='como vai acontecer' />
-            <div className="cardsTudo">
-              <h3 className='h3IMG' >
-                <img src="./img/meme.jpg" className="imgEmojis" />
-              </h3>
-              <h3 className='h3IMG' >
-                <img src="./img/meme.jpg" className="imgEmojis" />
-              </h3>
-              <h3 className='h3IMG' >
-                <img src="./img/meme.jpg" className="imgEmojis" />
-              </h3>
+        <div className='tudoComeçarJogo'>
+          <div className='modal'>
+            <div className='textoCJ'>
+              <input
+                type="text"
+                className='inputC'
+                placeholder='Como vai acontecer?'
+                value={historiaInput}
+                onChange={(e) => setHistoriaInput(e.target.value)}
+              />
+              <div className="cardsTudo">
+                {emojis.map((emoji, index) => (
+                  <h1 key={index} className='h1IMG'>{emoji}</h1>
+                ))}
+              </div>
+              <button onClick={gerarEmojis} className='btCARD'>Criar história</button>
+              <button onClick={() => setComeçarJogo(false)} className='btCARD'>Voltar ao menu</button>
             </div>
-            <button onClick={() => setComeçarJogo(!começarJogo)} className='btCARD'>voltar para o menu</button>
           </div>
         </div>
       )}
+
       {ultimoJogo && (
-        <div style={{
-          padding: "9.4% 10.8%",
-          transform: "scale(1)",
-          transition: "1s",
-          marginTop: "-244px",
-          background: "#8e9dab",
-          border: "1px solid blue",
-          borderRadius: "8px",
-          position: "absolute",
-          boxShadow: "10px 14px 16px rgba(0, 0, 0, 0.1)"
-        }}>
-          <input type="text" className='inputC' />
-          <h3 className='h3EG' >
-
-          </h3>
-          <h3 className='h3EG' >
-
-          </h3>
-          <h3 className='h3EG' >
-
-          </h3>
-          <button onClick={() => setUltimoJogo(!ultimoJogo)} className='btCARD'>voltar para o menu</button>
-
+        <div className="tudoUltimoJogo">
+          <div className='modal'>
+            <h2 className='h3Card'>Último Jogo</h2>
+            <h3 className='textoCard'>Texto digitado: {ultimaHistoria || "Nenhuma história criada ainda."}</h3>
+            <div className="cardsTudo">
+              {ultimoEmojis.length > 0 ? (
+                ultimoEmojis.map((emoji, index) => (
+                  <h3 key={index} className='h3IMG'>{emoji}</h3>
+                ))
+              ) : (
+                <p className="textoCard">Nenhum emoji gerado ainda.</p>
+              )}
+            </div>
+            <button onClick={() => setUltimoJogo(false)} className='btCARD'>Voltar ao menu</button>
+          </div>
         </div>
       )}
-      {comoJogar && (
-        <div style={{
-          width: "41%",
-          height: "50%",
-          transform: "scale(1)",
-          transition: "1s",
-          marginTop: "-244px",
-          background: "#8e9dab",
-          border: "1px solid blue",
-          borderRadius: "8px",
-          position: "absolute",
-          boxShadow: "10px 14px 16px rgba(0, 0, 0, 0.1)"
-        }}>
-          <h2 className='h3Card'>Como jogar story-cubes-digital</h2><br />
-          <h3 className='textoCard'>Os Story Cubes digital é um conjunto de emojis com imagens que ajudam a criar histórias de forma criativa e divertida, É um jogo aberto, ou seja, não tem regras fixas e pode ser jogado de várias maneiras diferentes.</h3><br />
-          <button onClick={() => setComoJogar(!comoJogar)} className='btCARD'>voltar para o menu</button>
 
+      {comoJogar && (
+        <div className="tudoComoJogar">
+          <div className='modal'>
+            <h2 className='h3Card'>Como jogar Story Cubes Digital</h2><br />
+            <h3 className='textoCard'>
+              Os Story Cubes digitais são um conjunto de emojis que ajudam a criar histórias de forma criativa e divertida. O jogo não tem regras fixas e pode ser jogado de diversas maneiras.
+            </h3><br />
+            <button onClick={() => setComoJogar(false)} className='btCARD'>Voltar ao menu</button>
+          </div>
         </div>
       )}
     </div>
-  )
+  );
 }
 
-export default Home_StoryCubesDigital
+export default Home_StoryCubesDigital;
