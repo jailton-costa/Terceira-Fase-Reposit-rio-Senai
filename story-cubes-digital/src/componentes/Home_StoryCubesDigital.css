@@ -1,4 +1,4 @@
-.homeSCD{
+.homeSCD {
   width: 41%;
   height: 50%;
   background-color: #606f7d;
@@ -6,19 +6,23 @@
   border-radius: 10px;
   text-align: center;
 
-}.testo{
+}
+
+.testo {
   color: rgb(47, 212, 212);
   margin-left: 2.5%;
   margin-bottom: 5%;
   border-bottom: 2px solid blue;
   width: 95%;
 }
-.bts{
+
+.bts {
   width: 40%;
   height: 40%;
   display: inline-block;
 }
-.bt{
+
+.bt {
   width: 65%;
   height: 30%;
   transform: scale(1);
@@ -26,74 +30,102 @@
   font-size: medium;
   margin-bottom: 10%;
   color: blue;
-  background-color: #8e9dab;
+  background-color: #606f7d;
   border: 1px solid blue;
   border-radius: 10px;
-}.bt:hover{
+}
+
+.bt:hover {
   transform: scale(1.1);
   transition: 1s;
   font-size: medium;
   margin-bottom: 10%;
   color: rgb(47, 212, 212);
-  background-color: blue;
+  background-color: #8e9dab;
   border: 1px solid rgb(47, 212, 212);
   border-radius: 10px;
 }
 
 
 /* cards */
-.cardsTudo{
+
+/* card 1 */
+.testoCJ {
+  display: inline-block;
+  margin-top: 9%;
+}
+
+.cardsTudo {
   justify-items: center;
   display: inline-flex;
-  gap: 5%;
   margin-top: 5%;
   margin-bottom: 5%;
 }
-.imgEmojis{
+
+.imgEmojis {
   display: inline-flex;
   justify-content: center;
-}
-.inputC{
-  color: blue;
-  background-color: #8e9dab;
-  text-align: center;
-  border: 1px solid blue;
-  border-radius: 10px;
-  width: 60%;
-
-}
-.h3IMG{
-  position: relative;
-  width: 30%;
-  height: 30%;
-  border: 1px solid blue;
-}
-.h3Card{
-  color: blue;
-}
-.textoCard{
-  color: blue;
+  width: 100%;
+  height: 100%;
 }
 
-
-.btCARD{
-  width: 60%;
-  height: 30%;
-  transform: scale(1);
-  transition: 1s;
-  font-size: medium;
-  color: blue;
-  background-color: #8e9dab;
-  border: 1px solid blue;
-  border-radius: 10px;
-}.btCARD:hover{
-  width: 60%;
-  height: 20%;
-  transform: scale(1.1);
-  transition: 1s;
-  font-size: medium;
+.inputC {
   color: rgb(47, 212, 212);
-  background-color: blue;
+  background-color: #8e9dab;
+  font-size: large;
+  text-align: center;
   border: 1px solid rgb(47, 212, 212);
   border-radius: 10px;
+  width: 30%;
+  height: 25px;
+  box-shadow: 10px 14px 16px rgba(0, 0, 0, 0.1);
+}
+
+.h3IMG {
+  margin-left: 10.3%;
+  position: relative;
+  width: 20%;
+  border: 1px solid blue;
+  box-shadow: 10px 14px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* card 3 */
+.h3Card {
+  width: 60%;
+  margin-left: 22%;
+  margin-top: 9%;
+  color: rgb(47, 212, 212);
+  border-bottom: 2px solid blue;
+}
+
+.textoCard {
+  color: blue;
+}
+
+
+.btCARD {
+  width: 30%;
+  height: 10%;
+  transform: scale(1);
+  transition: 1s;
+  font-size: large;
+  color: rgb(47, 212, 212);
+  background-color: #8e9dab;
+  border: 2px solid rgb(47, 212, 212);
+  border-radius: 10px;
+  box-shadow: 10px 14px 16px rgba(0, 0, 0, 0.1);
+}
+
+.btCARD:hover {
+  width: 30%;
+  height: 10%;
+  transform: scale(1.1);
+  transition: 1s;
+  font-size: large;
+  color: rgb(47, 212, 212);
+  background-color: #606f7d;
+  border: 2px solid rgb(47, 212, 212);
+  border-radius: 10px;
+  box-shadow: 10px 14px 16px rgba(0, 0, 0, 0.2);
+
 }
